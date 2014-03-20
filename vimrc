@@ -4,8 +4,7 @@ set backupdir=/var/tmp/vimtmp
 set nobackup
 set noswapfile
 set autoindent
-"set guifont=Monospace\ 9
-set guifont=Anonymous\ Pro\ 11
+set guifont=Monospace\ 9
 chdir /var/www/
 "let g:ragtag_global_maps = 1 
 

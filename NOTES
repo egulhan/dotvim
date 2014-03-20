@@ -1,0 +1,5 @@
+# Install fonts from /fonts dir
+cp ~/.vim/fonts/AnonymousPro ~/.fonts/
+
+# Pick the font
+set guifont=Anonymous\ Pro\ 11

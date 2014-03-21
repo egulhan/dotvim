@@ -1,3 +1,49 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" @author egulhan
+" @file .vimrc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tab keys mapping
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader=","
+nnoremap <leader>tnx :tabnext<cr>
+nnoremap <leader>tpr :tabprevious<cr>
+nnoremap <leader>tn :tabnew<cr>
+nnoremap <leader>tc :tabclose<cr>
+nnoremap <leader>tf :tabfirst<cr>
+nnoremap <leader>tl :tablast<cr>
+nnoremap <leader>to :tabonly<cr>
+nnoremap <leader>tm :tabmove<space>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" File type related auto-complete
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Auto. enable auto-complete for specific file types
+" how to use: 
+"	- Ctrl+x and Ctrl+o
+"	- Ctrl+x and Ctrl+p
+"	- Ctrl+n (normal word auto-complete)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" html
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+" js
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+" css
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+" php
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" pathogen
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
 set nowrap
 set backupdir=/var/tmp/vimtmp
@@ -7,27 +53,6 @@ set autoindent
 set guifont=Monospace\ 9
 chdir /var/www/
 "let g:ragtag_global_maps = 1 
-
-" pathogen
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Auto. enable auto-complete for specific file types
-" how to use: 
-"	- Ctrl+x and Ctrl+o
-"	- Ctrl+x and Ctrl+p
-"	- Ctrl+n (normal word auto-complete)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" html
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-" js
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-" css
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-" php
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 " Incremental search
 set incsearch
@@ -50,7 +75,6 @@ if has("gui_running")
     set guitablabel=%M\ %t
 endif
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -71,14 +95,3 @@ endif
 set ai "Auto indent
 "set si "Smart indent
 "set wrap "Wrap lines
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs, windows and buffers
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Useful mappings for managing tabs
-"map <leader>tn :tabnew<cr>
-"map <leader>to :tabonly<cr>
-"map <leader>tc :tabclose<cr>
-"map <leader>tm :tabmove 
-"map <leader>tnx :tabnext<cr> 
-"map <leader>tpr :tabprevious<cr>

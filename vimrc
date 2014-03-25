@@ -15,8 +15,8 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " Tab keys mapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=","
-nnoremap <leader>tnx :tabnext<cr>
-nnoremap <leader>tpr :tabprevious<cr>
+nnoremap <leader>tx :tabnext<cr>
+nnoremap <leader>tp :tabprevious<cr>
 nnoremap <leader>tn :tabnew<cr>
 nnoremap <leader>tc :tabclose<cr>
 nnoremap <leader>tf :tabfirst<cr>

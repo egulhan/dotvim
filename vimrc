@@ -52,6 +52,8 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Copy all content to clipboard
+nnoremap <leader>cb mxgg"+yG'x
 set number
 set nowrap
 set backupdir=/var/tmp/vimtmp

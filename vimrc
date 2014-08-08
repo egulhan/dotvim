@@ -4,6 +4,13 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" The following line solves the problem which:
+" 	vim-airline doesn't appear until I create a new split
+set laststatus=2
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ultisnips
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set ultisnips triggers
@@ -53,7 +60,7 @@ filetype plugin indent on
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Copy all content to clipboard
-nnoremap <leader>cb mxgg"+yG'x
+nnoremap <leader>2cb mxgg"+yG'x
 set number
 set nowrap
 set backupdir=/var/tmp/vimtmp
@@ -83,6 +90,10 @@ if has("gui_running")
     set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
+endif
+
+if has("statusline")
+ set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

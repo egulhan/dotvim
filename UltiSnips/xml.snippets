@@ -1,13 +1,7 @@
-snippet xel "xelement" b
-<xs:element name="${1:name}" type="${2:xs:string}"/>
+snippet xml "xml tag" b
+<?xml version="1.0" encoding="utf-8"?>
+
+
 endsnippet
 
-snippet xelcomp "element with complex element" b
-<xs:element name="${1:name}">
-	<xs:complexType>
-		<xs:sequence>
-			<xs:element name="${2:name}" type="${3:xs:string}"/>
-		</xs:sequence>
-	</xs:complexType>
-</xs:element>
-endsnippet
+extends xsd

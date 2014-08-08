@@ -1,0 +1,27 @@
+snippet xel "xelement" b
+<xs:element name="${1:name}" type="${2:xs:string}"/>
+endsnippet
+
+snippet xelcomp "element with complex element" b
+<xs:element name="${1:name}">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="${2:name}" type="${3:xs:string}"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+endsnippet
+
+snippet xsch "xs:schema defination tag" b
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+</xs:schema>
+endsnippet
+
+snippet xmlsch "bootstrap for xsd" b
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+$0
+
+</xs:schema>
+endsnippet

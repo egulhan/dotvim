@@ -4,4 +4,15 @@ snippet xml "xml tag" b
 
 endsnippet
 
+snippet xxsi "bootstrap for xml-schema instance" b
+<?xml version="1.0" encoding="utf-8"?>
+
+<${1:name} xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="${2:location} ${3:fileName}.xsd">
+
+$0
+
+</$1>
+endsnippet
+
 extends xsd

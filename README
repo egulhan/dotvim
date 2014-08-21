@@ -11,3 +11,13 @@ ln -s ~/.vim/vimrc ~/.vimrc
 cd ~/.vim
 git submodule init
 git submodule update
+
+# Install ctags for taglist plugin
+sudo apt-get install exuberant-ctags
+
+
+FAQ:
+----
+Q. I'm getting this error "Taglist: Exuberant ctags (http://ctags.sf.net) not found in PATH. Plugin is not loaded.". What is this about?
+
+~/.vim/plugin/taglist.vim plugin requires ctags. To solve the problem: sudo apt-get install exuberant-ctags

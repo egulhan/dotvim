@@ -63,7 +63,7 @@ filetype plugin indent on
 nnoremap <leader>2cb mxgg"+yG'x
 set number
 set nowrap
-set backupdir=/var/tmp/vimtmp
+set backupdir=/var/tmp/
 set nobackup
 set noswapfile
 set autoindent

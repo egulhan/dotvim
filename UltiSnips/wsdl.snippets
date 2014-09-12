@@ -1,0 +1,37 @@
+snippet wsdlbs "bootstrap for wsdl document" b
+
+endsnippet
+
+snippet wsmsg "wsdl:message tag" b
+<wsdl:message name="${1:name}">
+	<wsdl:part element="${2:element}" name="${3:parameters}"></wsdl:part>
+</wsdl:message>
+endsnippet
+
+snippet wsop "wsdl:operation tag" b
+<wsdl:operation name="${1:name}">
+	<wsdl:input message="tns:$1" name="$1"></wsdl:input>
+	<wsdl:output message="tns:$1Response" name="$1Response"></wsdl:output>
+</wsdl:operation>
+endsnippet
+
+snippet wsopbind "wsdl:operation tag inside wsdl:binding tag" b
+<wsdl:operation name="${1:name}">
+	<soap:operation soapAction="$1" style="document"/>
+	<wsdl:input name="$1"><soap:body use="literal"/></wsdl:input>
+	<wsdl:output name="$1Response"><soap:body use="literal"/></wsdl:output>
+</wsdl:operation>
+endsnippet
+
+snippet wsbind "wsdl:binding tag" b
+<wsdl:binding name="${1:name}" type="tns:${2:type}">
+	<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+	<wsdl:operation name="${3:name}">
+		<soap:operation soapAction="$3" style="document"/>
+		<wsdl:input name="$3"><soap:body use="literal"/></wsdl:input>
+		<wsdl:output name="$3Response"><soap:body use="literal"/></wsdl:output>
+	</wsdl:operation>
+</wsdl:binding>
+endsnippet
+
+extends xml
